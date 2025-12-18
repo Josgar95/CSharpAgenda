@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "R01hl/PY51U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Giuse\\Desktop\\Progetti\\CSharpAgenda\\AgendaApp\\AgendaApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Giuse\\.nuget\\packages\\microsoft.data.sqlite\\10.0.1\\microsoft.data.sqlite.10.0.1.nupkg.sha512",
+    "C:\\Users\\Giuse\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.1\\microsoft.data.sqlite.core.10.0.1.nupkg.sha512",
+    "C:\\Users\\Giuse\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\Giuse\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "C:\\Users\\Giuse\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\Giuse\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
