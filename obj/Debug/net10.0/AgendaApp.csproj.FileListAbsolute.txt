@@ -41,3 +41,4 @@ C:\Users\Giuse\Desktop\Progetti\CSharpAgenda\AgendaApp\obj\Debug\net10.0\refint\
 C:\Users\Giuse\Desktop\Progetti\CSharpAgenda\AgendaApp\obj\Debug\net10.0\AgendaApp.pdb
 C:\Users\Giuse\Desktop\Progetti\CSharpAgenda\AgendaApp\obj\Debug\net10.0\AgendaApp.genruntimeconfig.cache
 C:\Users\Giuse\Desktop\Progetti\CSharpAgenda\AgendaApp\obj\Debug\net10.0\ref\AgendaApp.dll
+C:\Users\Giuse\Desktop\Progetti\CSharpAgenda\AgendaApp\obj\Debug\net10.0\AgendaApp.sourcelink.json

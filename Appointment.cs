@@ -91,4 +91,56 @@ public class Appointment
         }
         return results;
     }
+
+    public static void AddNewAppointment(string connectionString)
+    {
+        // Limiti del giorno: 00:00–23:59:59
+
+        using (var conn = new SqliteConnection(connectionString))
+        {
+            conn.Open();
+            string start,end,title,desc,location,category;
+            int? priority;
+            bool isAllDay;
+
+
+            Console.WriteLine("Adding a new appointment...");
+            Console.WriteLine("Enter start time (yyyy-MM-dd HH:mm): ");
+            start = Console.ReadLine();
+            Console.WriteLine("Enter end time (yyyy-MM-dd HH:mm): ");
+            end = Console.ReadLine();
+            Console.WriteLine("Enter title: ");
+            title = Console.ReadLine();
+            Console.WriteLine("Enter description: ");
+            desc = Console.ReadLine();
+            Console.WriteLine("Enter location: ");
+            location = Console.ReadLine();
+            Console.WriteLine("Enter category: ");
+            category = Console.ReadLine();
+            Console.WriteLine("Enter priority (1-5): ");
+            priority = int.Parse(Console.ReadLine());
+            Console.WriteLine("Is all day? (true/false): ");
+            isAllDay = bool.Parse(Console.ReadLine());
+
+            string sql = @"
+            INSERT INTO Appointments (StartDateTime, EndDateTime, Title, Description, Location, Category, Priority, IsAllDay)
+            VALUES
+            (@start, @end, @title, @desc, @location, @category, @priority, @isAllDay);";
+            using (var cmd = new SqliteCommand(sql, conn))
+            {
+                // adding parameters for the SQL command
+                cmd.Parameters.AddWithValue("@start", start);
+                cmd.Parameters.AddWithValue("@end", end);
+                cmd.Parameters.AddWithValue("@title", title);
+                cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Parameters.AddWithValue("@location", location);
+                cmd.Parameters.AddWithValue("@category", category);
+                cmd.Parameters.AddWithValue("@priority", priority.HasValue ? (object)priority.Value : DBNull.Value);
+                cmd.Parameters.AddWithValue("@isAllDay", isAllDay ? 1 : 0);
+                cmd.ExecuteNonQuery();
+
+                Console.WriteLine("Appointment added successfully.");
+            }
+        }
+    }
 }
